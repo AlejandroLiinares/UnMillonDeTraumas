@@ -1,6 +1,6 @@
-# React + Vite
+# Un Millón de Traumas
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Esta será mi carta oficial de presentación al mundo
 
 Currently, two official plugins are available:
 
