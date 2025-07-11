@@ -1,0 +1,272 @@
+/* Estilos globales */
+:root {
+  /* Fuentes al estilo Apple */
+  font-family: -apple-system, BlinkMacSystemFont, 'SF Pro Text', 'Helvetica Neue', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  /* Colores principales basados en la portada */
+  --color-primary: #ff1a3e; /* Rojo intenso */
+  --color-secondary: #1a1a8f; /* Azul profundo */
+  --color-accent: #9900cc; /* Púrpura */
+  --color-text: #ffffff; /* Texto blanco */
+  --color-text-secondary: rgba(255, 255, 255, 0.8); /* Texto con transparencia */
+  --color-background: #0d0d2b; /* Fondo azul oscuro */
+  
+  /* Optimizaciones de texto */
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Animación del gradiente de fondo */
+@keyframes gradientAnimation {
+  0% {
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+  50% {
+    background-position: 100% 50%;
+    transform: scale(1.02);
+  }
+  100% {
+    background-position: 0% 50%;
+    transform: scale(1);
+  }
+}
+
+/* Animación de pulso para elementos destacados */
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: linear-gradient(45deg, var(--color-background), var(--color-secondary), var(--color-primary), var(--color-accent));
+  background-size: 400% 400%;
+  animation: gradientAnimation 15s ease infinite;
+  color: var(--color-text);
+  overflow-x: hidden;
+}
+
+/* Estilos para el contenedor principal */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+/* Capa de superposición para mejorar la legibilidad */
+.app-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.2);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* Estilos para el contenido principal */
+main {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+/* Estilos para los títulos al estilo Apple */
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+h1 {
+  font-size: 3.5rem;
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+/* Estilos para los enlaces */
+a {
+  text-decoration: none;
+  color: var(--color-text);
+  transition: opacity 0.3s ease;
+}
+
+a:active {
+  opacity: 0.7;
+}
+
+/* Estilos para tarjetas y contenedores */
+.card {
+  border-radius: 16px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.glass-effect {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Estilos para botones al estilo Apple */
+.btn {
+  border-radius: 12px;
+  font-weight: 500;
+  padding: 0.75rem 1.5rem;
+  transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+  border: none;
+}
+
+.btn-primary:active {
+  transform: scale(0.98);
+}
+
+/* Navbar personalizada */
+.navbar {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(13, 13, 43, 0.8) !important;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar-brand {
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+/* Animación para elementos destacados */
+.animated-element {
+  animation: pulse 4s ease infinite;
+}
+
+/* Estilos para dispositivos móviles */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+/* Estilos para dispositivos medianos */
+@media (min-width: 769px) and (max-width: 992px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+/* Estilos para dispositivos grandes */
+@media (min-width: 993px) {
+  .container {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}
+
+/* Estilos para cards */
+.card {
+  height: 100%;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos responsivos para títulos */
+h1 {
+  font-size: calc(1.5rem + 1.5vw);
+  margin-bottom: 1rem;
+}
+
+h2 {
+  font-size: calc(1.3rem + 0.9vw);
+  margin-bottom: 0.8rem;
+}
+
+h3 {
+  font-size: calc(1.2rem + 0.6vw);
+}
+
+/* Ajustes para imágenes responsivas */
+img {
+  max-width: 100%;
+  height: auto;
+}
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para navbar */
+.navbar {
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Media queries para diferentes tamaños de pantalla */
+@media (max-width: 768px) {
+  .container {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+  
+  .navbar-brand {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .lead {
+    font-size: 1rem;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+}
