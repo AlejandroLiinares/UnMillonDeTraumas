@@ -1,0 +1,374 @@
+/* Estilos para el componente Soundtrack */
+
+.soundtrack-container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+}
+
+/* Estilos para la lista de canciones */
+.track-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.track-item {
+  display: flex;
+  align-items: center;
+  padding: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  border: 1px solid #ddd;
+  background-color: #fff;
+}
+
+.track-item:hover {
+  background-color: #f8f9fa;
+}
+
+.track-image {
+  width: 80px;
+  height: 80px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-right: 1rem;
+}
+
+.track-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.track-info {
+  flex: 1;
+}
+
+.track-info h5 {
+  margin-bottom: 0.25rem;
+  font-weight: 600;
+}
+
+.track-info p {
+  margin-bottom: 0.25rem;
+  color: #555;
+}
+
+.track-info small {
+  color: #777;
+}
+
+.track-play {
+  margin-left: 1rem;
+}
+
+.btn-play {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Estilos para el reproductor de música modal */
+.music-player-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.music-player-modal.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.player-container {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
+
+.player-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.btn-close {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.device-name {
+  font-size: 0.8rem;
+  color: #777;
+}
+
+.album-cover {
+  width: 250px;
+  height: 250px;
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid #ddd;
+  margin-bottom: 2rem;
+}
+
+.album-cover img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.track-info {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.track-info h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  color: #333;
+}
+
+.track-info p {
+  color: #555;
+  margin-bottom: 0;
+}
+
+.progress-container {
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.time-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 4px;
+  background-color: #eee;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.progress {
+  height: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.controls button {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn-play-pause {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background-color: #f8f9fa;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  border: 1px solid #ddd;
+}
+
+.volume-container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.volume-bar {
+  flex: 1;
+  height: 4px;
+  background-color: #eee;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+.volume {
+  height: 100%;
+  background-color: #333;
+  border-radius: 2px;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.player-footer {
+  width: 100%;
+  text-align: center;
+}
+
+.device-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-size: 0.8rem;
+  color: #777;
+}
+
+/* Estilos para estados de carga y error */
+.loading-overlay, .error-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.error-overlay {
+  color: #d9534f;
+}
+
+.error-overlay i {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.error-overlay p {
+  font-size: 1rem;
+  margin: 0;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 4px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s linear infinite;
+}
+
+.spinner-small {
+  width: 24px;
+  height: 24px;
+  border: 3px solid rgba(0, 0, 0, 0.3);
+  border-radius: 50%;
+  border-top-color: var(--color-primary);
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Estilos para botones activos */
+.controls button.active {
+  color: var(--color-accent) !important;
+  opacity: 1 !important;
+}
+
+.controls button:disabled {
+  opacity: 0.3 !important;
+  cursor: not-allowed;
+}
+
+/* Descripción de la canción */
+.track-info .description {
+  display: block;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  opacity: 0.8;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Responsive adjustments */
+@media (max-width: 576px) {
+  .player-container {
+    padding: 1rem;
+  }
+  
+  .album-cover {
+    width: 200px;
+    height: 200px;
+    position: relative;
+  }
+  
+  .controls {
+    gap: 1rem;
+  }
+  
+  .btn-play-pause {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .track-info .description {
+    font-size: 0.8rem;
+    margin-top: 0.5rem;
+  }
+  
+  .volume-container {
+    margin-bottom: 1rem;
+  }
+}

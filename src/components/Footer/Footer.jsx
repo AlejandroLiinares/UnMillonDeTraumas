@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="col-auto">
             <div className="social-links d-flex gap-4">
               <a 
-                href="https://www.instagram.com/" 
+                href="https://www.instagram.com/alejandroliinares/" 
                 target="_blank" 
                 rel="noopener noreferrer" 
                 className="social-link"
@@ -29,26 +29,6 @@ const Footer = () => {
                 onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
                 <i className="bi bi-instagram"></i>
-              </a>
-              <a 
-                href="mailto:info@millondetraumas.com" 
-                className="social-link"
-                style={{
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  fontSize: '1.5rem',
-                  color: 'white',
-                  background: 'linear-gradient(135deg, var(--color-primary), var(--color-accent))',
-                  transition: 'opacity 0.3s ease',
-                }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
-              >
-                <i className="bi bi-envelope"></i>
               </a>
               <a 
                 href="https://www.amazon.com/" 

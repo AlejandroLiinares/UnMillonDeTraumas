@@ -1,0 +1,32 @@
+/* Estilos para el componente principal App */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+main {
+  flex: 1;
+  padding-bottom: 80px; /* Espacio para el menú de navegación */
+}
+
+/* Estilos para el menú de navegación flotante */
+.nav-pills .nav-link.active {
+  color: var(--color-primary);
+  background-color: #f8f9fa;
+  border: 1px solid #eee;
+}
+
+.nav-pills .nav-link {
+  margin: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  color: var(--color-text);
+}
+
+.nav-pills .nav-link:hover:not(.active) {
+  background-color: #f8f9fa;
+}
