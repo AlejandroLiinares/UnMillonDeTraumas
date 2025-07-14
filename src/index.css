@@ -20,34 +20,28 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Animación del gradiente de fondo */
+/* Animación del gradiente de fondo - sin cambios de escala */
 @keyframes gradientAnimation {
   0% {
     background-position: 0% 50%;
-    transform: scale(1);
   }
   50% {
     background-position: 100% 50%;
-    transform: scale(1.02);
   }
   100% {
     background-position: 0% 50%;
-    transform: scale(1);
   }
 }
 
-/* Animación de pulso para elementos destacados */
+/* Animación de pulso para elementos destacados - solo cambio de opacidad */
 @keyframes pulse {
   0% {
-    transform: scale(1);
     opacity: 1;
   }
   50% {
-    transform: scale(1.05);
     opacity: 0.9;
   }
   100% {
-    transform: scale(1);
     opacity: 1;
   }
 }
@@ -130,7 +124,7 @@ a:active {
   border: 1px solid rgba(255, 255, 255, 0.1);
   background-color: rgba(255, 255, 255, 0.05);
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: box-shadow 0.3s ease;
 }
 
 .glass-effect {
@@ -146,7 +140,7 @@ a:active {
   border-radius: 12px;
   font-weight: 500;
   padding: 0.75rem 1.5rem;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition: background-color 0.2s ease;
 }
 
 .btn-primary {
@@ -155,7 +149,7 @@ a:active {
 }
 
 .btn-primary:active {
-  transform: scale(0.98);
+  opacity: 0.9;
 }
 
 /* Navbar personalizada */
@@ -211,11 +205,10 @@ a:active {
 /* Estilos para cards */
 .card {
   height: 100%;
-  transition: transform 0.3s, box-shadow 0.3s;
+  transition: box-shadow 0.3s;
 }
 
 .card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -238,10 +231,6 @@ h3 {
 img {
   max-width: 100%;
   height: auto;
-}
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 /* Estilos para navbar */

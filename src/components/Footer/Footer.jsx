@@ -23,10 +23,10 @@ const Footer = () => {
                   fontSize: '1.5rem',
                   color: 'white',
                   background: 'linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45)',
-                  transition: 'transform 0.3s ease',
+                  transition: 'opacity 0.3s ease',
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
                 <i className="bi bi-instagram"></i>
               </a>
@@ -43,10 +43,10 @@ const Footer = () => {
                   fontSize: '1.5rem',
                   color: 'white',
                   background: 'linear-gradient(135deg, var(--color-primary), var(--color-accent))',
-                  transition: 'transform 0.3s ease',
+                  transition: 'opacity 0.3s ease',
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
                 <i className="bi bi-envelope"></i>
               </a>
@@ -65,10 +65,10 @@ const Footer = () => {
                   fontSize: '1.5rem',
                   color: 'white',
                   background: 'linear-gradient(135deg, #FF9900, #232F3E)',
-                  transition: 'transform 0.3s ease',
+                  transition: 'opacity 0.3s ease',
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.transform = 'scale(1.1)'}
-                onMouseLeave={(e) => e.currentTarget.style.transform = 'scale(1)'}
+                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
+                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
                 <i className="bi bi-cart"></i>
               </a>

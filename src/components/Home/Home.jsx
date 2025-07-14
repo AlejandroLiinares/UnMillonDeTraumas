@@ -5,7 +5,7 @@ const Home = () => {
   const bookCoverRef = useRef(null);
   const heroTextRef = useRef(null);
 
-  // Efecto para animar la portada del libro
+  // Efecto para animar la portada del libro - sin parallax
   useEffect(() => {
     const bookCover = bookCoverRef.current;
     const heroText = heroTextRef.current;
@@ -19,17 +19,6 @@ const Home = () => {
         heroText.style.transform = 'translateY(0)';
       }, 300);
     }
-
-    // Efecto de parallax en scroll
-    const handleScroll = () => {
-      if (bookCover) {
-        const scrollValue = window.scrollY;
-        bookCover.style.transform = `translateY(${scrollValue * 0.1}px) rotate(3deg)`;
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   return (
