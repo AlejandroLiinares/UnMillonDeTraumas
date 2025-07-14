@@ -62,14 +62,13 @@ const App = () => {
       </main>
       
       {/* Menú de navegación flotante */}
-      <div className="position-fixed bottom-0 start-0 end-0 py-3 glass-effect" style={{ zIndex: 1000 }}>
+      <div className="position-fixed bottom-0 start-0 end-0 py-3" style={{ zIndex: 1000 }}>
         <div className="container">
           <div className="d-flex justify-content-center">
-            <div className="nav-pills-container glass-effect px-3 py-2" style={{ 
-              borderRadius: '50px',
-              background: 'rgba(0, 0, 0, 0.5)',
-              backdropFilter: 'blur(10px)',
-              boxShadow: '0 10px 30px rgba(0, 0, 0, 0.3)'
+            <div className="nav-pills-container px-3 py-2" style={{ 
+              borderRadius: '4px',
+              background: '#fff',
+              border: '1px solid #ddd'
             }}>
               <ul className="nav nav-pills">
                 {[
@@ -90,10 +89,9 @@ const App = () => {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
                       }}
                       style={{
-                        color: activeComponent === item.id ? '#fff' : 'rgba(255, 255, 255, 0.7)',
-                        borderRadius: '50px',
-                        transition: 'all 0.3s ease',
-                        background: activeComponent === item.id ? 'linear-gradient(135deg, var(--color-primary), var(--color-accent))' : 'transparent',
+                        color: activeComponent === item.id ? '#fff' : '#333',
+                        borderRadius: '4px',
+                        background: activeComponent === item.id ? '#333' : 'transparent',
                       }}
                     >
                       <i className={`bi ${item.icon}`}></i>

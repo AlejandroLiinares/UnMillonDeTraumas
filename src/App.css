@@ -11,11 +11,10 @@ main {
   padding-bottom: 80px; /* Espacio para el menú de navegación */
 }
 
-/* Estilos para el menú de navegación flotante */
+/* Estilos para el menú de navegación */
 .nav-pills .nav-link.active {
-  color: var(--color-primary);
-  background-color: #f8f9fa;
-  border: 1px solid #eee;
+  color: #fff;
+  background-color: #333;
 }
 
 .nav-pills .nav-link {
@@ -23,8 +22,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: all 0.3s ease;
-  color: var(--color-text);
+  color: #333;
 }
 
 .nav-pills .nav-link:hover:not(.active) {

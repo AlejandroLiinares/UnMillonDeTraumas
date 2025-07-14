@@ -14,19 +14,17 @@ const Footer = () => {
                 rel="noopener noreferrer" 
                 className="social-link"
                 style={{
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '4px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '1.5rem',
-                  color: 'white',
-                  background: 'linear-gradient(135deg, #833AB4, #FD1D1D, #FCAF45)',
-                  transition: 'opacity 0.3s ease',
+                  fontSize: '1.3rem',
+                  color: '#333',
+                  border: '1px solid #ddd',
+                  backgroundColor: '#fff'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
                 <i className="bi bi-instagram"></i>
               </a>
@@ -36,19 +34,17 @@ const Footer = () => {
                 rel="noopener noreferrer" 
                 className="social-link"
                 style={{
-                  width: '50px',
-                  height: '50px',
-                  borderRadius: '50%',
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '4px',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  fontSize: '1.5rem',
-                  color: 'white',
-                  background: 'linear-gradient(135deg, #FF9900, #232F3E)',
-                  transition: 'opacity 0.3s ease',
+                  fontSize: '1.3rem',
+                  color: '#333',
+                  border: '1px solid #ddd',
+                  backgroundColor: '#fff'
                 }}
-                onMouseEnter={(e) => e.currentTarget.style.opacity = '0.8'}
-                onMouseLeave={(e) => e.currentTarget.style.opacity = '1'}
               >
                 <i className="bi bi-cart"></i>
               </a>
@@ -58,12 +54,13 @@ const Footer = () => {
         
         <div className="row justify-content-center text-center">
           <div className="col-md-8">
-            <p className="mb-3 text-white-50">&copy; 2025 Un Millón de Traumas. Todos los derechos reservados.</p>
-            <p className="text-white-50 fst-italic" style={{ 
+            <p className="mb-3" style={{ color: '#555' }}>&copy; 2025 Un Millón de Traumas. Todos los derechos reservados.</p>
+            <p style={{ 
               fontSize: '0.9rem', 
               maxWidth: '600px', 
               margin: '0 auto',
-              lineHeight: '1.6'
+              lineHeight: '1.6',
+              color: '#777'
             }}>
               Esta página no son lineas de codigo que salieron de mis manos, son destellos de un corazón que solo quiere cumplir sus sueños.
             </p>
